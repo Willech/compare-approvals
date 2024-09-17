@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-types": "npx openapi-typescript ./src/schemas/sgregister.json -o ./src/schemas/types/sgregister.d.ts"
   },
   "eslintConfig": {
     "extends": [
