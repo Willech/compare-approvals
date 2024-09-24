@@ -2,10 +2,7 @@ import {
     ChevronUpDownIcon,
   } from "@heroicons/react/24/outline";
   import {
-    Card,
-    CardHeader,
     Typography,
-    CardBody,
     Chip,
   } from "@material-tailwind/react";
 import type { Company } from "../../schemas/types/customtypes"
@@ -48,21 +45,6 @@ import CollapseDefault from "./Collapse";
     })
     
     return (
-      <Card className="h-full w-screen" 
-      placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        <CardHeader floated={false} shadow={false} className="rounded-none" 
-        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-          <div className="mb-8 flex items-center justify-between gap-8">
-            <div>
-              <Typography variant="h5" color="blue-gray" 
-              placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                Foretak med sentral godkjenning
-              </Typography>
-            </div>
-          </div>
-        </CardHeader>
-        <CardBody className="overflow-scroll px-0"
-            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           <table className="mt-4 w-full min-w-max table-auto text-left">
             <thead>
               <tr>
@@ -101,10 +83,10 @@ import CollapseDefault from "./Collapse";
                         <div className="flex items-center gap-3">
                           <div className="flex flex-col">
                             <Typography
-                                        variant="small"
-                                        color="blue-gray"
-                                        className="font-bold"
-                                        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                            >
+                                variant="small"
+                                color="blue-gray"
+                                className="font-bold"
+                                placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                            >
                               {navn}
                             </Typography>
                           </div>
@@ -112,12 +94,12 @@ import CollapseDefault from "./Collapse";
                       </td>
                       <td className={classes}>
                         <div className="flex flex-col">
-                        <Typography
-                                        variant="small"
-                                        color="blue-gray"
-                                        className="font-normal"
-                                        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                            >
-                              {orgnummer}
+                            <Typography
+                                variant="small"
+                                color="blue-gray"
+                                className="font-normal"
+                                placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                            >
+                                {orgnummer}
                             </Typography>
                         </div>
                       </td>
@@ -128,15 +110,13 @@ import CollapseDefault from "./Collapse";
                             (
                                 <CollapseDefault title={`${godkjenningsomrader.length} områder`}>
                                     <div className='flex flex-col gap-2'>
-
-                                    {godkjenningsomrader.map(omrade => {
-                                    return (
-                                        <Chip key={`${omrade.grad}-${omrade.funksjon}`} value={`${omrade.funksjon}: ${omrade.grad}`} color={omrade.chipColor as colors} />
-                                    )
-                                })}
+                                        {godkjenningsomrader.map(omrade => {
+                                        return (
+                                            <Chip key={`${omrade.grad}-${omrade.funksjon}`} value={`${omrade.funksjon}: ${omrade.grad}`} color={omrade.chipColor as colors} />
+                                        )
+                                        })}
                                     </div>
                                 </CollapseDefault>
-
                             ) : (
                                 <div className='flex flex-col gap-2'>
                                     {godkjenningsomrader.map(omrade => {
@@ -146,17 +126,13 @@ import CollapseDefault from "./Collapse";
                                     })}
                                 </div>
                             )}
-                        
                         </div>
                       </td>
-             
                     </tr>
                   );
                 },
               )}
             </tbody>
           </table>
-        </CardBody>
-      </Card>
     );
   }
