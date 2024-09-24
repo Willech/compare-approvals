@@ -33,7 +33,7 @@ export function DefaultPagination({active, setActive}: {active: number, setActiv
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}      >
-        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" /> Previous
+        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" /> Forrige
       </Button>
       <div className="flex items-center gap-2">
         <IconButton placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} {...getItemProps(1)}>1</IconButton>
@@ -50,7 +50,7 @@ export function DefaultPagination({active, setActive}: {active: number, setActiv
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}      >
-        Next
+        Neste
         <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
       </Button>
     </div>
