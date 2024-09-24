@@ -19,14 +19,14 @@ const CompanyMain = () => {
 
     return (
         <Card className="h-full w-screen" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        <CardHeader floated={false} shadow={false} className="rounded-none" 
+        <CardHeader floated={false} shadow={false} className="flex justify-start rounded-none" 
         placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 items-start'>
               <Typography variant="h5" color="blue-gray" 
               placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 Foretak med sentral godkjenning
               </Typography>
-              <Typography variant="h6" color="blue-gray" 
+              <Typography variant="paragraph" color="blue-gray" 
               placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 Dette er en liste som viser selskaper med sentral godkjenning, samt hvilke godkjenningsområder disse gjelder
               </Typography>
